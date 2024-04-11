@@ -1,0 +1,32 @@
+{
+    "lanches": [
+        {
+            "id": 1,
+            "name": "Hamburguer",
+            "price": "10.00"
+        },
+        {
+            "id": 2,
+            "name": "X-burguer",
+            "price": "14.00"
+        }
+    ],
+    "adicionais":[
+        {
+            "id": 1,
+            "type": "Cheddar"
+        }
+    ],
+    "bebida":[
+        {
+            "id": 1,
+            "mode": "coca-cola"
+        }
+    ],
+    "status":[
+        {
+            "id": 1,
+            "mode": "solicitado"
+        }
+    ]
+}
