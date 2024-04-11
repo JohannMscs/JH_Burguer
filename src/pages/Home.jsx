@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Banner from '../assets/components/Banner'
 
 
 const url = "http://localhost:3000/lanches"
@@ -21,6 +22,10 @@ useEffect(() => {
   return (
     <div className="pt-11">
 
+      <Banner/>
+
+      <h2>Monte seu lanche. Faça seu Hamburguer, crie a batata do seu jeito e escolha seu refrigerante</h2>
+
         <ul>
           {lanches && lanches.map((lanche) => (
             <li key={lanche.id}>
@@ -29,40 +34,7 @@ useEffect(() => {
             </li>
           ))}  
         </ul>
-        <div>inicio</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-        <div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
-<div>oi</div>
+
 
     </div>
   )
