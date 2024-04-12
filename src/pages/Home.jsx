@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import Banner from '../assets/components/Banner'
+import FormBurguer from '../assets/components/FormBurguer'
 
 
 const url = "http://localhost:3000/lanches"
@@ -25,6 +26,7 @@ useEffect(() => {
       <Banner/>
 
       <h2>Monte seu lanche. Faça seu Hamburguer, crie a batata do seu jeito e escolha seu refrigerante</h2>
+      <FormBurguer/>
 
         <ul>
           {lanches && lanches.map((lanche) => (
