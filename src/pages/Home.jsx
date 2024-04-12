@@ -27,7 +27,7 @@ useEffect(() => {
 
       <h2>Monte seu lanche. Faça seu Hamburguer, crie a batata do seu jeito e escolha seu refrigerante</h2>
       <FormBurguer/>
-
+{/*
         <ul>
           {lanches && lanches.map((lanche) => (
             <li key={lanche.id}>
@@ -36,7 +36,7 @@ useEffect(() => {
             </li>
           ))}  
         </ul>
-
+        */}
 
     </div>
   )
