@@ -8,7 +8,7 @@ function FormBurguer() {
   console.log(clientname, bread, meat)
   
   return (
-    <div className="mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 md:w-80 md:ml-6 ">
+    <div className="mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 md:w-80 md:ml-6 md:border-4 md:border-orange-800 md:rounded-md ">
         <img src={burguer} alt="" className="w-11" />
       <form action="" id="form-burguer" className="">
         <div className="div-container">
