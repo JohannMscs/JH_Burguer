@@ -8,7 +8,7 @@ function FormBurguer() {
   console.log(clientname, bread, meat)
   
   return (
-    <div className="mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 md:w-80 md:ml-6 md:border-4 md:border-orange-800 md:rounded-md ">
+    <div className=" w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-80 md:ml-6 ">
         <img src={burguer} alt="" className="w-11" />
       <form action="" id="form-burguer" className="">
         <div className="div-container">
@@ -36,13 +36,17 @@ function FormBurguer() {
         </div>
         <div className="div-container">
                 <label htmlFor="additional">Adicionais</label>
-                <div>
-                    <input type="checkbox" /> bacon
-                    <input type="checkbox" />cebola
-                </div>
+                <ul>
+                  <li>
+                    <input type="checkbox" />Bacon
+                  </li>
+                  <li>
+                    <input type="checkbox"/>Cebola
+                  </li>
+                </ul>
 
                 <div>
-                    <input type="submit" value="criar" />
+                    <input type="submit" value="criar" className=" bg-amber-100 py-1 px-4 border-2 border-yellow-600 rounded-md m-2 hover:bg-yellow-600"/>
                 </div>
                 
         </div>
