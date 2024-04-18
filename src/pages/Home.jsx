@@ -14,7 +14,7 @@ useEffect(() => {
         const data = await res.json()
 
         setLanches(data)
-        console.log(data)
+        //console.log(data)
     }
     fetchData()
 }, [])

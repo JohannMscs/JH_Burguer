@@ -1,11 +1,26 @@
+import axios from 'axios'
 import { useState } from "react";
 import burguer from "../../img/hamburger.png"
+
+const API = "http://localhost:3000/lanches"
 
 function FormBurguer() {
   const [clientname, setClientName] = useState("");
   const [bread, setBread] = useState("")
   const [meat, setMeat] = useState("")
   console.log(clientname, bread, meat)
+
+  axios.get(API)
+  .then(function (response){
+    //success
+    console.log(response)
+  })
+  .catch(function(error){
+    //error
+    console.log(error)
+  })
+  
+  
   
   return (
     <div className=" w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-80 md:ml-6 ">
