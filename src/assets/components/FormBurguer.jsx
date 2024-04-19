@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState } from "react";
 import burguer from "../../img/hamburger.png"
 
-const API = "http://localhost:3000/lanches"
+const API = "http://localhost:3000"
 
 function FormBurguer() {
   const [clientname, setClientName] = useState("");
@@ -10,17 +10,17 @@ function FormBurguer() {
   const [meat, setMeat] = useState("")
   console.log(clientname, bread, meat)
 
-  axios.get(API)
-  .then(function (response){
-    //success
-    console.log(response)
-  })
-  .catch(function(error){
-    //error
-    console.log(error)
-  })
-  
-  
+  const getLanches = async() => {
+    try{
+      const response = await axios.get(`${API}/lanches`)
+       const resp = await axios.get(response.
+      config.url)
+       console.log(resp.data)
+    }catch(error){
+      console.log(error)
+    }
+  }
+  getLanches()
   
   return (
     <div className=" w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-80 md:ml-6 ">
@@ -38,7 +38,9 @@ function FormBurguer() {
             <label htmlFor="bread">Escolha o seu pão</label>
             <select name="bread" id="bread" onChange={(e) => setBread(e.target.value)} className="inputs">
                 <option value="">Selecione o seu pão</option>
-                <option value="Integral">Integral</option>
+                {
+
+                }
             </select>
         </div>
         <div className="div-container">
