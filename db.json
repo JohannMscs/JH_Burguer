@@ -2,13 +2,19 @@
     "lanches": [
         {
             "id": 1,
-            "name": "Hamburguer",
-            "price": "10.00"
+            "name": "Pão Americano"
         },
         {
             "id": 2,
-            "name": "X-burguer",
-            "price": "14.00"
+            "name": "Brioche"
+        },
+        {
+            "id": 3,
+            "name": "Australiano"
+        },
+        {
+            "id": 4,
+            "name": "Pão de Cebola"
         }
     ],
     "adicionais":[
