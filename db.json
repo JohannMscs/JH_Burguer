@@ -1,162 +1,63 @@
 {
-  "lanches": [
+  "pao": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Pão Americano"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Brioche"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Australiano"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Pão de Cebola"
+    }
+  ],
+  "carne": [
+    {
+      "id": "1",
+      "type": "Acém"
+    },
+    {
+      "id": "2",
+      "type": "Peito"
+    },
+    {
+      "id": "3",
+      "type": "Alcatra"
+    },
+    {
+      "id": "4",
+      "type": "Picanha"
     }
   ],
   "adicionais": [
     {
-      "id": 1,
-      "type": "Cheddar"
+      "id": "1",
+      "name": "Cheedar"
+    },
+    {
+      "id": "2",
+      "name": "cebola caramelizada"
     }
   ],
   "bebida": [
     {
-      "id": 1,
+      "id": "1",
       "mode": "coca-cola"
     }
   ],
   "status": [
     {
-      "id": 1,
+      "id": "1",
       "mode": "solicitado"
     }
   ],
   "requests": [
-    {
-      "id": "93d2",
-      "clientName": "jose ",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "dbc7",
-      "clientName": "jose ",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "98a2",
-      "clientName": "jose ",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "7571",
-      "clientName": "jose ",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "b0a9",
-      "clientName": "jose ",
-      "bread": [],
-      "meat": [],
-      "name": ""
-    },
-    {
-      "id": "6f0c",
-      "clientName": "jose ",
-      "bread": {},
-      "meat": {},
-      "name": [
-        {
-          "id": 1,
-          "type": "Cheddar"
-        }
-      ]
-    },
-    {
-      "id": "fb9b",
-      "clientName": "jose ",
-      "bread": {},
-      "meat": {}
-    },
-    {
-      "id": "fb4b",
-      "clientName": "jose ",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "f561",
-      "clientName": "jorgee",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "4b73",
-      "clientName": "jorgee",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "1f81",
-      "clientName": "jorgee",
-      "bread": [],
-      "meat": [],
-      "name": []
-    },
-    {
-      "id": "97a5",
-      "clientName": "jorgee",
-      "bread": [],
-      "meat": [],
-      "name": {}
-    },
-    {
-      "id": "6620",
-      "clientName": "jorgee",
-      "bread": [],
-      "meat": [],
-      "name": {}
-    },
-    {
-      "id": "c99f",
-      "clientName": "jorge",
-      "bread": [],
-      "meat": [],
-      "name": {}
-    },
-    {
-      "id": "6bb7",
-      "clientName": "jorge",
-      "bread": [],
-      "meat": [],
-      "name": {}
-    },
-    {
-      "id": "1c9f",
-      "clientName": "jorgee",
-      "bread": "Australiano",
-      "meat": "Cheddar"
-    },
-    {
-      "id": "70f7",
-      "clientName": "jorgee",
-      "bread": "Australiano",
-      "meat": "Cheddar"
-    },
     {
       "id": "340a",
       "clientName": "jorgee",
@@ -179,6 +80,30 @@
       "clientName": "joao",
       "bread": "Pão Americano",
       "meat": "Cheddar"
+    },
+    {
+      "id": "deee",
+      "clientName": "jorge",
+      "bread": "Brioche",
+      "meat": "Cheddar"
+    },
+    {
+      "id": "b7c1",
+      "clientName": "jorge",
+      "bread": "Pão Americano",
+      "meat": "Cheddar"
+    },
+    {
+      "id": "e3c4",
+      "clientName": "jorgee",
+      "bread": "Brioche",
+      "meat": "Acém"
+    },
+    {
+      "id": "bf16",
+      "clientName": "jorge",
+      "bread": "Brioche",
+      "meat": "Alcatra"
     }
   ]
 }

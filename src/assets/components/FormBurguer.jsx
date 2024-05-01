@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import burguer from "../img/hamburger.png";
+import burguer from "../../img/hamburger.png";
 
 const API = "http://localhost:3000";
 
@@ -15,7 +15,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
   useEffect(() => {
     const getLanches = async () => {
       try {
-        const response = await axios.get(`${API}/lanches`);
+        const response = await axios.get(`${API}/pao`);
         const resp = await axios.get(response.config.url);
         setBreads(resp.data);
         console.log(breads)
@@ -29,7 +29,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
 console.log( breads)
   useEffect(() =>{
     
-  fetch(`${API}/adicionais`, {
+  fetch(`${API}/carne`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -47,10 +47,6 @@ console.log( breads)
   console.log(selectedMeat)
 
   function postRequest(request){
-
-    
-    
-    
 
     fetch('http://localhost:3000/requests', {
       method: 'POST',
