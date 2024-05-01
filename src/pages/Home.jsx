@@ -1,4 +1,3 @@
-import {useState, useEffect} from 'react'
 import Banner from '../assets/components/Banner'
 import FormBurguer from '../assets/components/FormBurguer'
 
@@ -18,17 +17,6 @@ const Home = () => {
       <section className="w-full flex items-center justify-center">
       <FormBurguer/>
       </section>
-{/*
-        <ul>
-          {lanches && lanches.map((lanche) => (
-            <li key={lanche.id}>
-                {lanche.name} - R${lanche.price}
-
-            </li>
-          ))}  
-        </ul>
-        */}
-
     </div>
   )
 }
