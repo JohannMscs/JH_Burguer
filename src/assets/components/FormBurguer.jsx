@@ -48,7 +48,6 @@ function FormBurguer(handleSubmit, hamburgerData) {
       })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data)
         setAdditional(data)
       })
       .catch((error) => console.log(error))
@@ -133,7 +132,10 @@ function FormBurguer(handleSubmit, hamburgerData) {
           <label htmlFor="additional">Adicionais</label>
           <ul>
               {additional.map((additionals) => (
-                <li key={}></li>
+                <li key={additionals.id} className="flex">
+                 <input type="checkbox" name="additional" id={additionals.id} onChange={handleChange} />
+                 {additionals.name}
+                </li>
               ))
 
               }
