@@ -8,6 +8,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
   const [breads, setBreads] = useState([]);
   const [meat, setMeat] = useState([]);
   const [additional, setAdditional] = useState([])
+  const [checked, setChecked] = useState(false)
   const [request, setRequest] = useState(hamburgerData || {});
   //request de dados aos tipos de pães
   useEffect(() => {
@@ -67,8 +68,6 @@ function FormBurguer(handleSubmit, hamburgerData) {
       })
       .catch((err) => console.log(err));
 
-    setMeat([]);
-    setBreads([]);
   }
   const submit = (event) => {
     event.preventDefault();
@@ -133,7 +132,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
           <ul>
               {additional.map((additionals) => (
                 <li key={additionals.id} className="flex">
-                 <input type="checkbox" name="additional" id={additionals.id} onChange={handleChange} />
+                 <input type="checkbox" name={`adicional-0${additionals.id}`} id={additionals.id} value={additionals.name} onChange={handleChange} />
                  {additionals.name}
                 </li>
               ))
