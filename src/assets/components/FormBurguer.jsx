@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
+import {useNavigate} from 'react-router-dom'
 import burguer from "../../img/hamburger.png";
 
 const API = "http://localhost:3000";
 
 function FormBurguer(handleSubmit, hamburgerData) {
   //const [clientName, setClientName] = useState('')
+  const navigate = useNavigate();
   const [breads, setBreads] = useState([]);
   const [meat, setMeat] = useState([]);
-  const [additional, setAdditional] = useState([])
-  const [checked, setChecked] = useState(false)
+  const [additional, setAdditional] = useState([]);
   const [request, setRequest] = useState(hamburgerData || {});
   //request de dados aos tipos de pães
   useEffect(() => {
@@ -55,6 +56,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
     },[])
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
+    request.adicionais =[]
     fetch(`${API}/requests`, {
       method: "POST",
       headers: {
@@ -65,6 +67,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
+        navigate('../../pages/Requests', {message: "pedido feito com sucesso"})
       })
       .catch((err) => console.log(err));
 
