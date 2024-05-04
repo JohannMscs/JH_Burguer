@@ -67,7 +67,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
-        navigate('../../pages/Requests', {message: "pedido feito com sucesso"})
+        navigate('../../pages/Requests', {state:{message: 'pedido feito com sucesso'}})
       })
       .catch((err) => console.log(err));
 
