@@ -726,6 +726,58 @@
       "meat": "Peito",
       "adicional-02": "cebola caramelizada",
       "adicionais": []
+    },
+    {
+      "id": "e591",
+      "clientName": "jorgee",
+      "bread": "Pão Americano",
+      "meat": "Peito",
+      "adicionais": []
+    },
+    {
+      "id": "9c92",
+      "clientName": "johann",
+      "bread": "Brioche",
+      "meat": "Acém",
+      "adicionais": []
+    },
+    {
+      "id": "ffb2",
+      "clientName": "jorge",
+      "bread": "Pão Americano",
+      "meat": "Peito",
+      "adicionais": []
+    },
+    {
+      "id": "8af7",
+      "clientName": "johann",
+      "bread": "Pão Americano",
+      "meat": "Acém",
+      "adicionais": []
+    },
+    {
+      "id": "45b9",
+      "clientName": "jorgee",
+      "bread": "Brioche",
+      "meat": "Peito",
+      "adicionais": []
+    },
+    {
+      "id": "2056",
+      "additionalValue": {
+        "additionalValue": {},
+        "adicional-02": "cebola caramelizada"
+      },
+      "adicional-01": "Cheedar"
+    },
+    {
+      "id": "1862",
+      "clientName": "joao",
+      "bread": "Pão Americano",
+      "meat": "Peito",
+      "adicional-01": "Cheedar",
+      "adicional-02": "cebola caramelizada",
+      "adicionais": []
     }
   ]
 }

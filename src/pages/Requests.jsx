@@ -11,8 +11,14 @@ if(location.state){
 
   return (
 
-    <div className="pt-12">
-     <h1>my project</h1>
+    <div className="pt-12 flex-row text-center">
+     <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
+     <article className="bg-white flex items-center justify-center p-2 font-bold">
+      <section className="list">pao</section>
+      <section className="list">carne</section>
+      <section className="list">Nome do cliente</section>
+      <section className="list">adicionais</section>
+     </article>
       {message && <Message msg="Pedido feito com sucesso!"/>}
     </div>
   )
