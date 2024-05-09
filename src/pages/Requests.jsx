@@ -12,6 +12,8 @@ if(location.state){
   return (
 
     <div className="pt-12 flex-row text-center">
+      {message && <Message msg="Pedido feito com 
+sucesso!"/>}
      <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
      <article className="bg-white flex items-center justify-center p-2 font-bold">
       <section className="list">pao</section>
@@ -19,7 +21,6 @@ if(location.state){
       <section className="list">Nome do cliente</section>
       <section className="list">adicionais</section>
      </article>
-      {message && <Message msg="Pedido feito com sucesso!"/>}
     </div>
   )
 }

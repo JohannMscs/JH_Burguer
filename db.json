@@ -778,6 +778,24 @@
       "adicional-01": "Cheedar",
       "adicional-02": "cebola caramelizada",
       "adicionais": []
+    },
+    {
+      "id": "2c12",
+      "clientName": "jorge",
+      "bread": "Pão Americano",
+      "meat": "Peito",
+      "adicional-01": "Cheedar",
+      "adicional-02": "cebola caramelizada",
+      "adicionais": []
+    },
+    {
+      "id": "37c5",
+      "clientName": "jorge",
+      "bread": "Australiano",
+      "meat": "Peito",
+      "adicional-01": "Cheedar",
+      "adicional-02": "cebola caramelizada",
+      "adicionais": []
     }
   ]
 }

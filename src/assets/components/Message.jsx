@@ -22,7 +22,7 @@ const timer = setTimeout(() => {
     <>
     
     {visible && (
-       <div>{msg}</div>
+       <div className="bg-green-300/70 w-52 h-12 m-2 absolute border-spacing-2 rounded-lg flex justify-center items-center">{msg}</div>
     )}
     
     </>
