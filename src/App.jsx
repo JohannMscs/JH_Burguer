@@ -7,6 +7,7 @@ import Footer from "./assets/components/Footer";
 
 
 function App() {
+  
   return (
     <div className="bg-amber-200">
       <Router>
