@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import burguer from "../../img/hamburger.png";
 
 const API = "http://localhost:3000";
@@ -41,22 +41,21 @@ function FormBurguer(handleSubmit, hamburgerData) {
       })
       .catch((err) => console.log(err));
   }, []);
-    useEffect(()=> {
-      fetch(`${API}/adicionais`, {
-        method: "GET",
-        headers: {
-          "Content-type" : "application/json",
-        },
-      })
+  useEffect(() => {
+    fetch(`${API}/adicionais`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
       .then((resp) => resp.json())
       .then((data) => {
-        setAdditional(data)
+        setAdditional(data);
       })
-      .catch((error) => console.log(error))
-    },[])
+      .catch((error) => console.log(error));
+  }, []);
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
-    request.adicionais =[]
     fetch(`${API}/requests`, {
       method: "POST",
       headers: {
@@ -67,10 +66,11 @@ function FormBurguer(handleSubmit, hamburgerData) {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
-        navigate('../../pages/Requests', {state:{message: 'pedido feito com sucesso'}})
+        navigate("../../pages/Requests", {
+          state: { message: "pedido feito com sucesso" },
+        });
       })
       .catch((err) => console.log(err));
-
   }
   const submit = (event) => {
     event.preventDefault();
@@ -131,16 +131,38 @@ function FormBurguer(handleSubmit, hamburgerData) {
           </label>
         </div>
         <div className="div-container">
-          <label htmlFor="additional">Adicionais</label>
+          <label htmlFor="additional">escolha até 4 Adicionais</label>
           <ul>
-              {additional.map((additionals) => (
-                <li key={additionals.id} className="flex">
-                 <input type="checkbox" name={`adicional-0${additionals.id}`} id={additionals.id} value={additionals.name} onChange={handleChange} />
-                 {additionals.name}
-                </li>
-              ))
-
-              }
+            <li>
+              <select
+                name="additionals1"
+                id="meat"
+                onChange={handleChange}
+                className="inputs"
+              >
+                <option value="">escolha seu adicional</option>
+                {additional.map((additionals) => (
+                  <option value={additionals.name} key={additionals.id}>
+                    {additionals.name}
+                  </option>
+                ))}
+              </select>
+            </li>
+            <li>
+              <select
+                name="additionals2"
+                id="meat"
+                onChange={handleChange}
+                className="inputs"
+              >
+                <option value="">escolha seu adicional</option>
+                {additional.map((additionals) => (
+                  <option value={additionals.name} key={additionals.id}>
+                    {additionals.name}
+                  </option>
+                ))}
+              </select>
+            </li>
           </ul>
 
           <div>

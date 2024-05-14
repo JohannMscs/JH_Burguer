@@ -42,8 +42,25 @@
     },
     {
       "id": "2",
-      "name": "cebola caramelizada"
+      "name": "Cebola caramelizada"
+    },
+    {
+      "id": "3",
+      "name": "batata frita M"
+    },
+    {
+      "id": "4",
+      "name": "Bacon"
+    },
+    {
+      "id": "5",
+      "name": "Salada"
+    },
+    {
+      "id": "6",
+      "name": "Onion rings"
     }
+
   ],
   "bebida": [
     {
@@ -59,21 +76,20 @@
   ],
   "requests": [
     {
-      "id": "f060",
-      "clientName": "jorge",
-      "bread": "Pão Americano",
+      "id": "7c54",
+      "additionals1": "Cheedar",
+      "additionals2": "cebola caramelizada",
       "meat": "Acém",
-      "adicional-01": "Cheedar",
-      "adicionais": []
+      "bread": "Brioche",
+      "clientName": "jorge"
     },
     {
-      "id": "17e0",
-      "clientName": "jose ",
-      "bread": "Australiano",
-      "meat": "Acém",
-      "adicional-01": "Cheedar",
-      "adicional-02": "cebola caramelizada",
-      "adicionais": []
+      "id": "2e6d",
+      "clientName": "johann",
+      "bread": "Brioche",
+      "meat": "Alcatra",
+      "additionals1": "cebola caramelizada",
+      "additionals2": "Cheedar"
     }
   ]
 }

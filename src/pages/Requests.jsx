@@ -22,6 +22,7 @@ if(location.state){
     .then((resp) => resp.json())
     .then((data) => {
       setItems(data)
+      console.log(data)
     })
 
   },[])
@@ -36,6 +37,14 @@ sucesso!"/>}
         Items.map((item) => (
           <div key={item.id} className="flex-column m-3 bg-gray-300">
           <h1>cliente: {item.clientName}</h1>
+          <section>
+            <ul>
+              <li>{item.bread}</li>
+              <li>{item.meat}</li>
+              <li>{item.additionals1}</li>
+              <li>{item.additionals2}</li>
+            </ul>
+          </section>
           </div>
         ))
       }
