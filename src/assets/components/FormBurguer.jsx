@@ -10,6 +10,8 @@ function FormBurguer(handleSubmit, hamburgerData) {
   const [breads, setBreads] = useState([]);
   const [meat, setMeat] = useState([]);
   const [additional, setAdditional] = useState([]);
+  const [accompaniment, setAccompaniment] = useState([]);
+  const [drink, setDrink] = useState([]);
   const [request, setRequest] = useState(hamburgerData || {});
   //request de dados aos tipos de pães
   useEffect(() => {
@@ -41,6 +43,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
       })
       .catch((err) => console.log(err));
   }, []);
+  //request aos dados das partes adicionais
   useEffect(() => {
     fetch(`${API}/adicionais`, {
       method: "GET",
@@ -54,6 +57,21 @@ function FormBurguer(handleSubmit, hamburgerData) {
       })
       .catch((error) => console.log(error));
   }, []);
+  useEffect(() => {
+    fetch(`${API}/acompanhamento`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setAccompaniment(data)
+        console.log(data)
+      })
+      .catch((err) => console.log(err))
+    },[]);
+
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
     fetch(`${API}/requests`, {
@@ -131,7 +149,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
           </label>
         </div>
         <div className="div-container">
-          <label htmlFor="additional">escolha até 4 Adicionais</label>
+          <label htmlFor="additional">escolha até 3 Adicionais</label>
           <ul>
             <li>
               <select
@@ -163,7 +181,34 @@ function FormBurguer(handleSubmit, hamburgerData) {
                 ))}
               </select>
             </li>
+            <li>
+              <select
+                name="additionals3"
+                id="meat"
+                onChange={handleChange}
+                className="inputs"
+              >
+                <option value="">escolha seu adicional</option>
+                {additional.map((additionals) => (
+                  <option value={additionals.name} key={additionals.id}>
+                    {additionals.name}
+                  </option>
+                ))}
+              </select>
+            </li>
           </ul>
+
+          <div>
+
+            <select name="accompaniments" id="accompaniments" onChange={handleChange} className="inputs">
+              <option value="">escolha seu componente</option>
+              {accompaniment.map((accompaniments) => (
+                <option key={accompaniments.id} value={accompaniments.name}>
+                  {accompaniments.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
           <div>
             <input

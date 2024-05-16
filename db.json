@@ -42,30 +42,79 @@
     },
     {
       "id": "2",
-      "name": "Cebola caramelizada"
-    },
-    {
-      "id": "3",
-      "name": "batata frita M"
-    },
-    {
-      "id": "4",
       "name": "Bacon"
     },
     {
-      "id": "5",
+      "id": "3",
       "name": "Salada"
     },
     {
+      "id": "4",
+      "name": "Cebola caramelizada"
+    },
+    {
+      "id": "5",
+      "name": "Mussarela"
+    },
+    {
       "id": "6",
-      "name": "Onion rings"
+      "name": "Presunto"
     }
-
   ],
-  "bebida": [
+  "acompanhamento": [
     {
       "id": "1",
-      "mode": "coca-cola"
+      "name": "Batata frita P"
+    },
+    {
+      "id": "2",
+      "name": "batata frita M"
+    },
+    {
+      "id": "3",
+      "name": "Batata frita G"
+    },
+    {
+      "id": "4",
+      "name": "Batata frita com bancon e cheddar"
+    },
+    {
+      "id": "5",
+      "name": "Onion rings P"
+    },
+    {
+      "id": "6",
+      "name": "Onion rings M"
+    },
+    {
+      "id": "7",
+      "name": "Onion rings G"
+    }
+  ],
+  "bebidas": [
+    {
+      "id": "1",
+      "mode": "coca-cola 2L"
+    },
+    {
+      "id": "2",
+      "name": "Guaraná 2L"
+    },
+    {
+      "id": "3",
+      "name": "Pepsi lata 350ml"
+    },
+    {
+      "id": "4",
+      "name": "Coca-cola 350ml"
+    },
+    {
+      "id": "5",
+      "name": "Suco de uva del valle"
+    },
+    {
+      "id": "6",
+      "name": "Guaracamp"
     }
   ],
   "status": [
@@ -90,6 +139,24 @@
       "meat": "Alcatra",
       "additionals1": "cebola caramelizada",
       "additionals2": "Cheedar"
+    },
+    {
+      "id": "a673",
+      "clientName": "jorge",
+      "bread": "Australiano",
+      "meat": "Peito",
+      "additionals1": "batata frita M",
+      "additionals2": "Salada"
+    },
+    {
+      "id": "dea7",
+      "clientName": "jorge",
+      "bread": "Pão Americano",
+      "meat": "Acém",
+      "additionals1": "Cheedar",
+      "additionals2": "Salada",
+      "accompaniments": "Onion rings P",
+      "additionals3": "Bacon"
     }
   ]
 }

@@ -32,7 +32,7 @@ if(location.state){
       {message && <Message msg="Pedido feito com 
 sucesso!"/>}
      <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
-     <article className="bg-white flex items-center justify-center p-2 font-bold">
+     <article className="bg-white flex items-center justify-center flex-wrap p-2 font-bold ">
       {
         Items.map((item) => (
           <div key={item.id} className="flex-column m-3 bg-gray-300">
