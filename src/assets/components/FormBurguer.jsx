@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import burguer from "../../img/hamburger.png";
+import SelectAccompaniments from "./SelectAccompaniments";
 
 const API = "http://localhost:3000";
 
@@ -98,6 +99,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
   //recolhe o dados do formulario
   const handleChange = (event) => {
     setRequest({ ...request, [event.target.name]: event.target.value });
+    console.log(request)
   };
   return (
     <div className=" w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-80 md:ml-6 ">
@@ -209,7 +211,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
               ))}
             </select>
           </div>
-
+          <SelectAccompaniments handleChange={handleChange}/>
           <div>
             <input
               type="submit"

@@ -157,6 +157,12 @@
       "additionals2": "Salada",
       "accompaniments": "Onion rings P",
       "additionals3": "Bacon"
+    },
+    {
+      "id": "1953",
+      "accompaniments": "Batata frita P",
+      "additionals3": "Cheedar",
+      "additionals2": "Bacon"
     }
   ]
 }
