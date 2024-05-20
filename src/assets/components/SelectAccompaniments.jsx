@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 
 const API = 'http://localhost:3000/acompanhamento'
-
+//recebimento de dados de acompanhamentos
 function SelectAccompaniments({handleChange}) {
 const [accompaniments, setAccompaniments] = useState([])
 
@@ -18,10 +18,15 @@ useEffect(() => {
   })
   .catch((err) => console.log(err))
 },[])
+
+
   return (
     <select name="accompaniments2" id="accompanimnets2" className="inputs" onChange={handleChange} >
-      <option value="carne"> carne</option>
-      <option value="salada">salada</option>
+      <option value="">escolha seu acompanhamento</option>
+      {accompaniments.map((accompaniment) => (
+        <option key={accompaniment.id} value={accompaniment.name}>{accompaniment.name}</option>
+      ))}
+
     </select>
   )
 }

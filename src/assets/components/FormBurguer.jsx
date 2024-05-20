@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import burguer from "../../img/hamburger.png";
 import SelectAccompaniments from "./SelectAccompaniments";
+import SelectAdditionals from "./SelectAdditionals";
 
 const API = "http://localhost:3000";
 
@@ -12,7 +13,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
   const [meat, setMeat] = useState([]);
   const [additional, setAdditional] = useState([]);
   const [accompaniment, setAccompaniment] = useState([]);
-  const [drink, setDrink] = useState([]);
+  //const [drink, setDrink] = useState([]);
   const [request, setRequest] = useState(hamburgerData || {});
   //request de dados aos tipos de pães
   useEffect(() => {
@@ -211,7 +212,9 @@ function FormBurguer(handleSubmit, hamburgerData) {
               ))}
             </select>
           </div>
-          <SelectAccompaniments handleChange={handleChange}/>
+          <SelectAdditionals handleChange={handleChange} />
+          <SelectAccompaniments handleChange={handleChange} />
+          <SelectAccompaniments handleChange={handleChange} />
           <div>
             <input
               type="submit"
@@ -226,3 +229,4 @@ function FormBurguer(handleSubmit, hamburgerData) {
 }
 
 export default FormBurguer;
+//230 lines

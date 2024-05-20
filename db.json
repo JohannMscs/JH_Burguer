@@ -157,6 +157,16 @@
       "additionals2": "Salada",
       "accompaniments": "Onion rings P",
       "additionals3": "Bacon"
+    },
+    {
+      "id": "affd",
+      "accompaniments2": "Onion rings P",
+      "additionals3": "Cheedar",
+      "additionals2": "Cheedar",
+      "additionals1": "Cheedar",
+      "meat": "Acém",
+      "bread": "Pão Americano",
+      "clientName": "jorge"
     }
   ]
 }
