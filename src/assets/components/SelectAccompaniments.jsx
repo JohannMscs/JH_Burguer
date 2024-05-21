@@ -16,7 +16,7 @@ useEffect(() => {
   .then((data) => {
     setAccompaniments(data)
   })
-  .catch((err) => console.log(err))
+  .catch((error) => console.log(error))
 },[])
 
 

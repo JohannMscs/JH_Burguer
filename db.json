@@ -2,19 +2,19 @@
   "pao": [
     {
       "id": "1",
-      "name": "Pão Americano"
+      "type": "Pão Americano"
     },
     {
       "id": "2",
-      "name": "Brioche"
+      "type": "Brioche"
     },
     {
       "id": "3",
-      "name": "Australiano"
+      "type": "Australiano"
     },
     {
       "id": "4",
-      "name": "Pão de Cebola"
+      "type": "Pão de Cebola"
     }
   ],
   "carne": [

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import burguer from "../../img/hamburger.png";
 import SelectAccompaniments from "./SelectAccompaniments";
 import SelectAdditionals from "./SelectAdditionals";
+import SelectBreadMeat from "./SelectBreadMeat";
 
 const API = "http://localhost:3000";
 
@@ -40,7 +41,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
       .then((data) => {
         setMeat(data);
       })
-      .catch((err) => console.log(err));
+      .catch((error) => console.log(error));
   }, []);
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
@@ -58,7 +59,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
           state: { message: "pedido feito com sucesso" },
         });
       })
-      .catch((err) => console.log(err));
+      .catch((error) => console.log(error));
   }
   const submit = (event) => {
     event.preventDefault();
@@ -75,6 +76,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
       <img src={burguer} alt="" className="w-11" />
       <form action="" id="form-burguer" className="" onSubmit={submit}>
         <div className="div-container">
+        <SelectBreadMeat handleChange={handleChange}/>
           <label htmlFor="clientName">Nome do cliente</label>
           <input
             type="text"
@@ -136,7 +138,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
           <label htmlFor="">Escolha seu acompanhamento</label>
           <SelectAccompaniments handleChange={handleChange} />
         </div>
-        <div>
+        <div className="flex justify-center">
           <input
             type="submit"
             value="criar"
