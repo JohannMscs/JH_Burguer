@@ -11,9 +11,6 @@ function FormBurguer(handleSubmit, hamburgerData) {
   const navigate = useNavigate();
   const [breads, setBreads] = useState([]);
   const [meat, setMeat] = useState([]);
-  const [additional, setAdditional] = useState([]);
-  const [accompaniment, setAccompaniment] = useState([]);
-  //const [drink, setDrink] = useState([]);
   const [request, setRequest] = useState(hamburgerData || {});
   //request de dados aos tipos de pães
   useEffect(() => {
@@ -45,35 +42,6 @@ function FormBurguer(handleSubmit, hamburgerData) {
       })
       .catch((err) => console.log(err));
   }, []);
-  //request aos dados das partes adicionais
-  useEffect(() => {
-    fetch(`${API}/adicionais`, {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setAdditional(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-  useEffect(() => {
-    fetch(`${API}/acompanhamento`, {
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setAccompaniment(data)
-        console.log(data)
-      })
-      .catch((err) => console.log(err))
-    },[]);
-
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
     fetch(`${API}/requests`, {
@@ -100,7 +68,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
   //recolhe o dados do formulario
   const handleChange = (event) => {
     setRequest({ ...request, [event.target.name]: event.target.value });
-    console.log(request)
+    console.log(request);
   };
   return (
     <div className=" w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-80 md:ml-6 ">
@@ -153,75 +121,27 @@ function FormBurguer(handleSubmit, hamburgerData) {
         </div>
         <div className="div-container">
           <label htmlFor="additional">escolha até 3 Adicionais</label>
-          <ul>
-            <li>
-              <select
-                name="additionals1"
-                id="meat"
-                onChange={handleChange}
-                className="inputs"
-              >
-                <option value="">escolha seu adicional</option>
-                {additional.map((additionals) => (
-                  <option value={additionals.name} key={additionals.id}>
-                    {additionals.name}
-                  </option>
-                ))}
-              </select>
-            </li>
-            <li>
-              <select
-                name="additionals2"
-                id="meat"
-                onChange={handleChange}
-                className="inputs"
-              >
-                <option value="">escolha seu adicional</option>
-                {additional.map((additionals) => (
-                  <option value={additionals.name} key={additionals.id}>
-                    {additionals.name}
-                  </option>
-                ))}
-              </select>
-            </li>
-            <li>
-              <select
-                name="additionals3"
-                id="meat"
-                onChange={handleChange}
-                className="inputs"
-              >
-                <option value="">escolha seu adicional</option>
-                {additional.map((additionals) => (
-                  <option value={additionals.name} key={additionals.id}>
-                    {additionals.name}
-                  </option>
-                ))}
-              </select>
-            </li>
-          </ul>
-
-          <div>
-
-            <select name="accompaniments" id="accompaniments" onChange={handleChange} className="inputs">
-              <option value="">escolha seu componente</option>
-              {accompaniment.map((accompaniments) => (
-                <option key={accompaniments.id} value={accompaniments.name}>
-                  {accompaniments.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <SelectAdditionals handleChange={handleChange} />
+          <SelectAdditionals
+            handleChange={handleChange}
+            nameSelect="additionals1"
+          />
+          <SelectAdditionals
+            handleChange={handleChange}
+            nameSelect="additionals2"
+          />
+          <SelectAdditionals
+            handleChange={handleChange}
+            nameSelect="additionals3"
+          />
+          <label htmlFor="">Escolha seu acompanhamento</label>
           <SelectAccompaniments handleChange={handleChange} />
-          <SelectAccompaniments handleChange={handleChange} />
-          <div>
-            <input
-              type="submit"
-              value="criar"
-              className=" bg-amber-100 py-1 px-4 border-2 border-yellow-600 rounded-md m-2 hover:bg-yellow-600"
-            />
-          </div>
+        </div>
+        <div>
+          <input
+            type="submit"
+            value="criar"
+            className=" bg-amber-100 py-1 px-4 border-2 border-yellow-600 rounded-md m-2 hover:bg-yellow-600"
+          />
         </div>
       </form>
     </div>

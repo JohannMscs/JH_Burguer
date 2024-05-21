@@ -167,6 +167,16 @@
       "meat": "Acém",
       "bread": "Pão Americano",
       "clientName": "jorge"
+    },
+    {
+      "id": "af3c",
+      "clientName": "joelson",
+      "bread": "Australiano",
+      "meat": "Acém",
+      "additionals1": "Bacon",
+      "additionals3": "Cebola caramelizada",
+      "additionals2": "Presunto",
+      "accompaniments2": "batata frita M"
     }
   ]
 }
