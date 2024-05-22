@@ -94,7 +94,7 @@
   "bebidas": [
     {
       "id": "1",
-      "mode": "coca-cola 2L"
+      "name": "coca-cola 2L"
     },
     {
       "id": "2",
@@ -123,60 +123,5 @@
       "mode": "solicitado"
     }
   ],
-  "requests": [
-    {
-      "id": "7c54",
-      "additionals1": "Cheedar",
-      "additionals2": "cebola caramelizada",
-      "meat": "Acém",
-      "bread": "Brioche",
-      "clientName": "jorge"
-    },
-    {
-      "id": "2e6d",
-      "clientName": "johann",
-      "bread": "Brioche",
-      "meat": "Alcatra",
-      "additionals1": "cebola caramelizada",
-      "additionals2": "Cheedar"
-    },
-    {
-      "id": "a673",
-      "clientName": "jorge",
-      "bread": "Australiano",
-      "meat": "Peito",
-      "additionals1": "batata frita M",
-      "additionals2": "Salada"
-    },
-    {
-      "id": "dea7",
-      "clientName": "jorge",
-      "bread": "Pão Americano",
-      "meat": "Acém",
-      "additionals1": "Cheedar",
-      "additionals2": "Salada",
-      "accompaniments": "Onion rings P",
-      "additionals3": "Bacon"
-    },
-    {
-      "id": "affd",
-      "accompaniments2": "Onion rings P",
-      "additionals3": "Cheedar",
-      "additionals2": "Cheedar",
-      "additionals1": "Cheedar",
-      "meat": "Acém",
-      "bread": "Pão Americano",
-      "clientName": "jorge"
-    },
-    {
-      "id": "af3c",
-      "clientName": "joelson",
-      "bread": "Australiano",
-      "meat": "Acém",
-      "additionals1": "Bacon",
-      "additionals3": "Cebola caramelizada",
-      "additionals2": "Presunto",
-      "accompaniments2": "batata frita M"
-    }
-  ]
+  "requests": []
 }

@@ -37,9 +37,9 @@ function SelectBreadMeat({handleChange}) {
 
 
   return (
-    <section >
+    <section>
         <article>
-            <label htmlFor=""> Escolha o seu pão</label>
+            <label className="font-semibold"> Escolha o seu pão</label>
             <select name="bread" className="inputs" onChange={handleChange}>
                 <option value="slee">Selecione seu pão</option>
                 {breads.map((bread) => (
@@ -48,7 +48,7 @@ function SelectBreadMeat({handleChange}) {
             </select>
         </article>
         <article>
-            <label htmlFor=""> Escolha a sua carne</label>
+            <label className="font-semibold"> Escolha a sua carne</label>
             <select name="meat" className="inputs" onChange={handleChange}>
             <option value=""> Selecione sua carne</option>
             {meats.map((meat) => (
