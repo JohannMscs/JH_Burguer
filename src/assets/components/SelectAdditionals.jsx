@@ -18,7 +18,8 @@ function SelectAdditionals({ handleChange, nameSelect }) {
   }, []);
 
   return (
-    <select className="inputs" onChange={handleChange} name={nameSelect}>
+    <select className=" text-gray-400 block mt-2 border-2 
+    border-gray-800 rounded-md text-center md:w-32 h-10" onChange={handleChange} name={nameSelect}>
       <option value="">Escolha seu adicional</option>
       {additionals.map((additional) => (
         <option key={additional.id} value={additional.name}>

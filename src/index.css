@@ -9,7 +9,7 @@
 }
 @layer components{
     .inputs{
-        @apply  text-gray-400 block mt-2 border-2 border-gray-800 rounded-md text-center w-44 h-10
+        @apply  text-gray-400 block mt-2 border-2 border-gray-800 rounded-md text-center w-44 h-10 md:w-96 md:ml-5
     }
 }
 @layer components{
