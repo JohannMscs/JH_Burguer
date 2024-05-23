@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
+//import images
 import burguer from "../../img/hamburger.png";
+import potato from "../../img/batata-frita.png";
+import drink from "../../img/refrigerante.png";
+
+//import components
 import SelectAccompaniments from "./SelectAccompaniments";
 import SelectAdditionals from "./SelectAdditionals";
 import SelectBreadMeat from "./SelectBreadMeat";
@@ -42,7 +48,15 @@ function FormBurguer(handleSubmit, hamburgerData) {
   };
   return (
     <section className=" box-border w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-3/4 md:ml-6 lg:w-2/4">
-      <img src={burguer} alt="" className="w-11" />
+      <ul className="flex">
+        <li>
+        <img src={potato} className="w-11"/>
+        </li>
+        <li>
+        <img src={burguer} className="w-11" />
+        </li>
+        <img src={drink} className="w-11" />
+      </ul>
       <form action="" id="form-burguer" onSubmit={submit} className="w-3/4">
         <div
           className="  m-5 flex-col flex items-center
