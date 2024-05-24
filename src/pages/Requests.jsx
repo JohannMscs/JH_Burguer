@@ -1,56 +1,69 @@
-import {useEffect, useState} from 'react'
-import {useLocation} from 'react-router-dom'
-import Message from "../assets/components/Message"
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import Message from "../assets/components/Message";
 
 const Requests = () => {
-  const [Items, setItems] =useState([])
+  const [Items, setItems] = useState([]);
   const API = "http://localhost:3000";
 
-const location = useLocation()
-let message = ''
-if(location.state){
-  message = location.state
+  const location = useLocation();
+  let message = "";
+  if (location.state) {
+    message = location.state;
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     fetch(`${API}/requests`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",
       },
     })
-    .then((resp) => resp.json())
-    .then((data) => {
-      setItems(data)
-      console.log(data)
-    })
-
-  },[])
+      .then((resp) => resp.json())
+      .then((data) => {
+        setItems(data);
+        console.log(data);
+      });
+  }, []);
   return (
-
     <div className="pt-12 flex-row text-center">
-      {message && <Message msg="Pedido feito com 
-sucesso!"/>}
-     <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
-     <article className="bg-white flex items-center justify-center flex-wrap p-2 font-bold ">
-      {
-        Items.map((item) => (
-          <div key={item.id} className="flex-column m-3 bg-gray-300">
-          <h1>cliente: {item.clientName}</h1>
-          <section>
-            <ul>
-              <li>{item.bread}</li>
-              <li>{item.meat}</li>
-              <li>{item.additionals1}</li>
-              <li>{item.additionals2}</li>
-            </ul>
+      {message && (
+        <Message
+          msg="Pedido feito com 
+sucesso!"
+        />
+      )}
+      <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
+      <article className=" flex items-center justify-center flex-wrap p-2 font-bold ">
+        {Items.map((item) => (
+          <section key={item.id} className=" bg-white flex flex-col m-3">
+            <div className="flex md:block ">
+              <ul className="md:flex border-b-2 border-black md:border-0">
+                <li className="table"><p>Nome</p></li>
+                <li className="table">Pão</li>
+                <li className="table">Carne</li>
+                <li className="table">Adicionais</li>
+                <li className="table w-36">Acompanhamento</li>
+                <li className="table">Bebida</li>
+              </ul>
+              <ul className=" flex flex-col md:flex-row items-start border-b-2 border-black">
+                <li className="table ">{item.clientName}</li>
+                <li className="table">{item.bread}</li>
+                <li className="table">{item.meat}</li>
+                <li className="table">
+                  <p className="h-5">{item.additionals1}</p>
+                  <p className="h-5">{item.additionals2}</p>
+                  <p className="h-5">{item.additionals3}</p>
+                </li>
+                <li className="table w-36">{item.accompaniments}</li>
+                <li className="table">{item.drink}</li>
+              </ul>
+            </div>
           </section>
-          </div>
-        ))
-      }
-     </article>
+        ))}
+      </article>
     </div>
-  )
-}
+  );
+};
 
-export default Requests
+export default Requests;

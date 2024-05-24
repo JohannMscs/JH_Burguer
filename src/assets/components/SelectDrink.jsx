@@ -20,7 +20,7 @@ function SelectDrink({handleChange}) {
     }, [])
 
   return (
-    <select className="inputs" onChange={handleChange}>
+    <select className="inputs"  name="drink"onChange={handleChange}>
         <option value="">Selecione a sua bebida</option>
         {drinks.map((drink) => (
             <option key={drink.id} value={drink.name}>
