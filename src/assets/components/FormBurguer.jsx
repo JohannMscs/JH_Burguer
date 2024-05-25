@@ -20,6 +20,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
   const [request, setRequest] = useState(hamburgerData || {});
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
+    request.status = "Socilitado"
     fetch(`${API}/requests`, {
       method: "POST",
       headers: {

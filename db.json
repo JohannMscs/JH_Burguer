@@ -119,21 +119,28 @@
   ],
   "status": [
     {
-      "id": "1",
-      "mode": "solicitado"
+      "id": "2",
+      "state": "sendo preparado"
+    },
+    {
+      "id": "3",
+      "state": "entregue"
+    },
+    {
+      "id": "4",
+      "state": "cancelado"
     }
   ],
   "requests": [
     {
-      "id": "4425",
-      "clientName": "jorge",
-      "bread": "Pão Americano",
-      "meat": "Peito",
-      "additionals1": "Salada",
-      "additionals2": "Presunto",
-      "additionals3": "Mussarela",
-      "accompaniments": "Batata frita G",
-      "drink": "Coca-cola 350ml"
+      "id": "bf5b",
+      "clientName": "johann",
+      "status": "sendo preparado"
+    },
+    {
+      "id": "2d4e",
+      "clientName": "jorgee",
+      "status": "entregue"
     }
   ]
 }

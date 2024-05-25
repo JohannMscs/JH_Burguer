@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Message from "../assets/components/Message";
+import SelectStatus from "../assets/components/SelectStatus";
 
 const Requests = () => {
-  const [Items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
   const API = "http://localhost:3000";
 
   const location = useLocation();
@@ -11,7 +12,7 @@ const Requests = () => {
   if (location.state) {
     message = location.state;
   }
-
+  
   useEffect(() => {
     fetch(`${API}/requests`, {
       method: "GET",
@@ -22,7 +23,6 @@ const Requests = () => {
       .then((resp) => resp.json())
       .then((data) => {
         setItems(data);
-        console.log(data);
       });
   }, []);
   return (
@@ -33,13 +33,16 @@ const Requests = () => {
 sucesso!"
         />
       )}
+
       <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
       <article className=" flex items-center justify-center flex-wrap p-2 font-bold ">
-        {Items.map((item) => (
-          <section key={item.id} className=" bg-white flex flex-col m-3">
+        {items.map((item) => (
+          <section key={item.id} className=" md:flex ">
             <div className="flex md:block ">
               <ul className="md:flex border-b-2 border-black md:border-0">
-                <li className="table"><p>Nome</p></li>
+                <li className="table">
+                  <p>Nome</p>
+                </li>
                 <li className="table">Pão</li>
                 <li className="table">Carne</li>
                 <li className="table">Adicionais</li>
@@ -57,11 +60,14 @@ sucesso!"
                 </li>
                 <li className="table w-36">{item.accompaniments}</li>
                 <li className="table">{item.drink}</li>
+                <SelectStatus states={item.status} id={item.id}/>
               </ul>
             </div>
           </section>
+       
         ))}
       </article>
+      
     </div>
   );
 };
