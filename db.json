@@ -120,7 +120,7 @@
   "status": [
     {
       "id": "2",
-      "state": "sendo preparado"
+      "state": "preparando"
     },
     {
       "id": "3",
@@ -135,12 +135,22 @@
     {
       "id": "bf5b",
       "clientName": "johann",
-      "status": "sendo preparado"
+      "status": "entregue"
     },
     {
       "id": "2d4e",
       "clientName": "jorgee",
       "status": "entregue"
+    },
+    {
+      "id": "d1fe",
+      "clientName": "joao",
+      "status": "entregue"
+    },
+    {
+      "id": "5f96",
+      "clientName": "johann",
+      "status": "Socilitado"
     }
   ]
 }

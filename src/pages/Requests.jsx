@@ -12,7 +12,7 @@ const Requests = () => {
   if (location.state) {
     message = location.state;
   }
-  
+
   useEffect(() => {
     fetch(`${API}/requests`, {
       method: "GET",
@@ -33,13 +33,12 @@ const Requests = () => {
 sucesso!"
         />
       )}
-
       <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
       <article className=" flex items-center justify-center flex-wrap p-2 font-bold ">
         {items.map((item) => (
-          <section key={item.id} className=" md:flex ">
-            <div className="flex md:block ">
-              <ul className="md:flex border-b-2 border-black md:border-0">
+          <section key={item.id}>
+            <div className="flex md:block">
+              <ul className="md:flex  border-b-2 border-black md:border-0">
                 <li className="table">
                   <p>Nome</p>
                 </li>
@@ -48,6 +47,7 @@ sucesso!"
                 <li className="table">Adicionais</li>
                 <li className="table w-36">Acompanhamento</li>
                 <li className="table">Bebida</li>
+                <li className="table">Status</li>
               </ul>
               <ul className=" flex flex-col md:flex-row items-start border-b-2 border-black">
                 <li className="table ">{item.clientName}</li>
@@ -60,14 +60,12 @@ sucesso!"
                 </li>
                 <li className="table w-36">{item.accompaniments}</li>
                 <li className="table">{item.drink}</li>
-                <SelectStatus states={item.status} id={item.id}/>
+                <SelectStatus states={item.status} id={item.id} />
               </ul>
             </div>
           </section>
-       
         ))}
       </article>
-      
     </div>
   );
 };

@@ -50,8 +50,8 @@ function SelectStatus({states, id }) {
         })
     }
   return (
-    <div>
-        <select value="status" onChange={handleSelect}>
+    <div className="flex flex-col md:flex ">
+        <select value="status" onChange={handleSelect} className="h-16 w-36 border-b-2 border-black md:w-28" >
             <option value="">{updateSnack == ''? states : updateSnack}</option>
             {statusUpdate.map((update) => (
                 <option key={update.id} value={update.state}>
@@ -60,8 +60,6 @@ function SelectStatus({states, id }) {
             ))}
         </select>
         <button onClick={deleteSnack}>Delete</button>
-        <button ></button>
-        
 
         
     </div>
