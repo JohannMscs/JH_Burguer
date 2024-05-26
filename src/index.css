@@ -18,7 +18,7 @@
     }
 @layer components{
     .table{
-        @apply bg-white w-36 md:w-28 h-16 border-b-2 border-black  flex-col justify-center
+        @apply bg-white w-40 lg:w-28 h-16 border-b-2 border-black  flex-col justify-center
     }
 }
 }

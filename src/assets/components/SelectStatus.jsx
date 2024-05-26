@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
 
-const API = "http://localhost:3000"
+const API = import.meta.env.VITE_API
+const API_LOCAL = "http://localhost:3000/requests"
 
-function SelectStatus({states, id }) {
+function SelectStatus({states, id}) {
     const [statusUpdate, setStatusUpdate] = useState([])
     const [snackDelete, setSnackDelete] = useState([])
     const [updateSnack, setUpdateSnack] = useState([])
@@ -26,7 +27,7 @@ function SelectStatus({states, id }) {
         const newStatus = event.target.value
         setUpdateSnack(newStatus)
 
-        fetch(`${API}/requests/${id}`,{
+        fetch(`${API_LOCAL}/${id}`,{
             method: "PATCH",
             headers : {
                 "Content-type" : "application/json",
@@ -37,7 +38,7 @@ function SelectStatus({states, id }) {
 
     //deleta os dados 
     const deleteSnack = () => {
-        fetch(`${API}/requests/${id}`,{
+        fetch(`${API_LOCAL}/${id}`,{
             method: "DELETE",
             headers: {
                 "Content-type" : "application/json",
@@ -51,7 +52,7 @@ function SelectStatus({states, id }) {
     }
   return (
     <div className="flex flex-col md:flex ">
-        <select value="status" onChange={handleSelect} className="h-16 w-36 border-b-2 border-black md:w-28" >
+        <select value="status" onChange={handleSelect} className="h-16 w-40 border-b-2 border-black lg:w-28" >
             <option value="">{updateSnack == ''? states : updateSnack}</option>
             {statusUpdate.map((update) => (
                 <option key={update.id} value={update.state}>
@@ -59,7 +60,7 @@ function SelectStatus({states, id }) {
                 </option>
             ))}
         </select>
-        <button onClick={deleteSnack}>Delete</button>
+        <button onClick={deleteSnack} className="bg-red-400 border-2 border-red-600 rounded-sm m-2">Delete</button>
 
         
     </div>

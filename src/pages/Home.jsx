@@ -2,9 +2,9 @@ import Banner from '../assets/components/Banner'
 import FormBurguer from '../assets/components/FormBurguer'
 
 
+
+
 const Home = () => {
-
-
 
  
         
@@ -13,7 +13,7 @@ const Home = () => {
 
       <Banner/>
       <section className="w-full flex items-center justify-center">
-      <FormBurguer/>
+      <FormBurguer API={`ola`}/>
       </section>
     </div>
   )

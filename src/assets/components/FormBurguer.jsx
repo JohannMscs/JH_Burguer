@@ -12,16 +12,18 @@ import SelectAdditionals from "./SelectAdditionals";
 import SelectBreadMeat from "./SelectBreadMeat";
 import SelectDrink from "./SelectDrink";
 
-const API = "http://localhost:3000";
+const API = import.meta.env.VITE_API
 
+console.log(API)
 function FormBurguer(handleSubmit, hamburgerData) {
+  console.log(API)
   //const [clientName, setClientName] = useState('')
   const navigate = useNavigate();
   const [request, setRequest] = useState(hamburgerData || {});
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
     request.status = "Socilitado"
-    fetch(`${API}/requests`, {
+    fetch("http://localhost:3000/requests", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -76,7 +78,7 @@ justify-center text-center md:flex-row md:flex-wrap"
               className="inputs"
             />
           </article>
-          <SelectBreadMeat handleChange={handleChange} />
+          <SelectBreadMeat handleChange={handleChange} API={API}/>
           <article className=" md:flex md:flex-row md:flex-wrap md:justify-center md:items-center md:ml-5">
             <label htmlFor="additional" className="font-semibold md:w-full">
               escolha até 3 Adicionais
@@ -98,13 +100,13 @@ justify-center text-center md:flex-row md:flex-wrap"
             <label htmlFor="" className="font-semibold">
               Escolha seu acompanhamento
             </label>
-            <SelectAccompaniments handleChange={handleChange} />
+            <SelectAccompaniments handleChange={handleChange} API={API}/>
           </article>
           <article className="md:flex md:flex-col md:justify-center md:items-center">
             <label htmlFor="" className="font-semibold">
               Escolha sua bebida
             </label>
-            <SelectDrink handleChange={handleChange} />
+            <SelectDrink handleChange={handleChange} API={API} />
           </article>
           <input
             type="submit"

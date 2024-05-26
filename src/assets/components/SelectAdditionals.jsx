@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:3000/adicionais";
+//const API = "http://localhost:3000/adicionais";
+const API = import.meta.env.VITE_API;
 function SelectAdditionals({ handleChange, nameSelect }) {
   const [additionals, setAdditionals] = useState([]);
 
   useEffect(() => {
-    fetch(`${API}`, {
+    fetch(`${API}/adicionais`, {
       method: "GET",
       headers: {
         "Content-type": "application/json",

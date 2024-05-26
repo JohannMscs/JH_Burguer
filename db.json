@@ -1,155 +1,27 @@
 {
-  "pao": [
-    {
-      "id": "1",
-      "type": "Pão Americano"
-    },
-    {
-      "id": "2",
-      "type": "Brioche"
-    },
-    {
-      "id": "3",
-      "type": "Australiano"
-    },
-    {
-      "id": "4",
-      "type": "Pão de Cebola"
-    }
-  ],
-  "carne": [
-    {
-      "id": "1",
-      "type": "Acém"
-    },
-    {
-      "id": "2",
-      "type": "Peito"
-    },
-    {
-      "id": "3",
-      "type": "Alcatra"
-    },
-    {
-      "id": "4",
-      "type": "Picanha"
-    }
-  ],
-  "adicionais": [
-    {
-      "id": "1",
-      "name": "Cheedar"
-    },
-    {
-      "id": "2",
-      "name": "Bacon"
-    },
-    {
-      "id": "3",
-      "name": "Salada"
-    },
-    {
-      "id": "4",
-      "name": "Cebola caramelizada"
-    },
-    {
-      "id": "5",
-      "name": "Mussarela"
-    },
-    {
-      "id": "6",
-      "name": "Presunto"
-    }
-  ],
-  "acompanhamento": [
-    {
-      "id": "1",
-      "name": "Batata frita P"
-    },
-    {
-      "id": "2",
-      "name": "batata frita M"
-    },
-    {
-      "id": "3",
-      "name": "Batata frita G"
-    },
-    {
-      "id": "4",
-      "name": "Batata frita com bancon e cheddar"
-    },
-    {
-      "id": "5",
-      "name": "Onion rings P"
-    },
-    {
-      "id": "6",
-      "name": "Onion rings M"
-    },
-    {
-      "id": "7",
-      "name": "Onion rings G"
-    }
-  ],
-  "bebidas": [
-    {
-      "id": "1",
-      "name": "coca-cola 2L"
-    },
-    {
-      "id": "2",
-      "name": "Guaraná 2L"
-    },
-    {
-      "id": "3",
-      "name": "Pepsi lata 350ml"
-    },
-    {
-      "id": "4",
-      "name": "Coca-cola 350ml"
-    },
-    {
-      "id": "5",
-      "name": "Suco de uva del valle"
-    },
-    {
-      "id": "6",
-      "name": "Guaracamp"
-    }
-  ],
-  "status": [
-    {
-      "id": "2",
-      "state": "preparando"
-    },
-    {
-      "id": "3",
-      "state": "entregue"
-    },
-    {
-      "id": "4",
-      "state": "cancelado"
-    }
-  ],
   "requests": [
     {
-      "id": "bf5b",
-      "clientName": "johann",
-      "status": "entregue"
+      "id": "e6be",
+      "clientName": "jorge",
+      "bread": "Brioche",
+      "meat": "Acém",
+      "additionals1": "Cebola",
+      "additionals2": "Salada",
+      "additionals3": "Cebola caramelizada",
+      "accompaniments": "Batata frita G",
+      "drink": "Pepsi lata 350ml",
+      "status": "Socilitado"
     },
     {
-      "id": "2d4e",
-      "clientName": "jorgee",
-      "status": "entregue"
-    },
-    {
-      "id": "d1fe",
-      "clientName": "joao",
-      "status": "entregue"
-    },
-    {
-      "id": "5f96",
-      "clientName": "johann",
+      "id": "aa44",
+      "clientName": "jorge",
+      "bread": "Brioche",
+      "meat": "Alcatra",
+      "additionals1": "Bacon",
+      "additionals2": "Cebola caramelizada",
+      "additionals3": "Mussarela",
+      "accompaniments": "batata frita M",
+      "drink": "Coca-cola 350ml",
       "status": "Socilitado"
     }
   ]
