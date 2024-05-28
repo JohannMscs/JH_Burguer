@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react'
 
-//const API = 'http://localhost:3000/acompanhamento'
-//recebimento de dados de acompanhamentos
+
 function SelectAccompaniments({handleChange, API}) {
 const [accompaniments, setAccompaniments] = useState([])
 
+//recebimento de dados de acompanhamentos
 useEffect(() => {
   fetch(`${API}/acompanhamento`, {
     method: "GET",

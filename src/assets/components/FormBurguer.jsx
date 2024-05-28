@@ -12,17 +12,14 @@ import SelectAdditionals from "./SelectAdditionals";
 import SelectBreadMeat from "./SelectBreadMeat";
 import SelectDrink from "./SelectDrink";
 
-const API = import.meta.env.VITE_API
+const API = import.meta.env.VITE_API;
 
-console.log(API)
 function FormBurguer(handleSubmit, hamburgerData) {
-  console.log(API)
-  //const [clientName, setClientName] = useState('')
   const navigate = useNavigate();
   const [request, setRequest] = useState(hamburgerData || {});
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto
   function postRequest(request) {
-    request.status = "Socilitado"
+    request.status = "Socilitado";
     fetch("http://localhost:3000/requests", {
       method: "POST",
       headers: {
@@ -31,8 +28,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
       body: JSON.stringify(request),
     })
       .then((resp) => resp.json())
-      .then((data) => {
-        console.log(data);
+      .then(() => {
         navigate("../../pages/Requests", {
           state: { message: "pedido feito com sucesso" },
         });
@@ -42,21 +38,19 @@ function FormBurguer(handleSubmit, hamburgerData) {
   const submit = (event) => {
     event.preventDefault();
     postRequest(request);
-    //console.log(request)
   };
-  //recolhe o dados do formulario
+  //recolhe o dados preenchidos no formulario e envia para request em bd.json
   const handleChange = (event) => {
     setRequest({ ...request, [event.target.name]: event.target.value });
-    console.log(request);
   };
   return (
     <section className=" box-border w-3/4 mt-10 mb-3 p-3 flex flex-col items-center bg-orange-300 border-4 rounded-md border-orange-800 md:w-3/4 md:ml-6 lg:w-2/4">
       <ul className="flex">
         <li>
-        <img src={potato} className="w-11"/>
+          <img src={potato} className="w-11" />
         </li>
         <li>
-        <img src={burguer} className="w-11" />
+          <img src={burguer} className="w-11" />
         </li>
         <img src={drink} className="w-11" />
       </ul>
@@ -66,9 +60,7 @@ function FormBurguer(handleSubmit, hamburgerData) {
 justify-center text-center md:flex-row md:flex-wrap"
         >
           <article className=" md:w-full md:flex md:flex-col md:items-center">
-            <label htmlFor="clientName" className="font-semibold">
-              Nome do cliente
-            </label>
+            <label className="font-semibold">Nome do cliente</label>
             <input
               type="text"
               id="clientName"
@@ -78,9 +70,9 @@ justify-center text-center md:flex-row md:flex-wrap"
               className="inputs"
             />
           </article>
-          <SelectBreadMeat handleChange={handleChange} API={API}/>
+          <SelectBreadMeat handleChange={handleChange} API={API} />
           <article className=" md:flex md:flex-row md:flex-wrap md:justify-center md:items-center md:ml-5">
-            <label htmlFor="additional" className="font-semibold md:w-full">
+            <label className="font-semibold md:w-full">
               escolha até 3 Adicionais
             </label>
             <SelectAdditionals
@@ -97,15 +89,11 @@ justify-center text-center md:flex-row md:flex-wrap"
             />
           </article>
           <article className=" flex flex-col items-center">
-            <label htmlFor="" className="font-semibold">
-              Escolha seu acompanhamento
-            </label>
-            <SelectAccompaniments handleChange={handleChange} API={API}/>
+            <label className="font-semibold">Escolha seu acompanhamento</label>
+            <SelectAccompaniments handleChange={handleChange} API={API} />
           </article>
           <article className="md:flex md:flex-col md:justify-center md:items-center">
-            <label htmlFor="" className="font-semibold">
-              Escolha sua bebida
-            </label>
+            <label className="font-semibold">Escolha sua bebida</label>
             <SelectDrink handleChange={handleChange} API={API} />
           </article>
           <input

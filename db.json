@@ -1,28 +1,3 @@
 {
-  "requests": [
-    {
-      "id": "e6be",
-      "clientName": "jorge",
-      "bread": "Brioche",
-      "meat": "Acém",
-      "additionals1": "Cebola",
-      "additionals2": "Salada",
-      "additionals3": "Cebola caramelizada",
-      "accompaniments": "Batata frita G",
-      "drink": "Pepsi lata 350ml",
-      "status": "Socilitado"
-    },
-    {
-      "id": "aa44",
-      "clientName": "jorge",
-      "bread": "Brioche",
-      "meat": "Alcatra",
-      "additionals1": "Bacon",
-      "additionals2": "Cebola caramelizada",
-      "additionals3": "Mussarela",
-      "accompaniments": "batata frita M",
-      "drink": "Coca-cola 350ml",
-      "status": "Socilitado"
-    }
-  ]
+  "requests": []
 }

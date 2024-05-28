@@ -25,7 +25,7 @@ const Requests = () => {
       });
   }, []);
   return (
-    <div className="pt-12 flex-row text-center">
+    <div className="pt-12 flex-row text-center h-full">
       {message && (
         <Message
           msg="Pedido feito com 
@@ -33,7 +33,7 @@ sucesso!"
         />
       )}
       <h1 className="font-bold text-3xl ">Gerenciar pedidos</h1>
-      <article className=" flex items-center justify-center flex-wrap p-2 font-bold ">
+      <article className=" flex items-center justify-center flex-wrap p-2 font-bold min-h-screen">
         {items.map((item) => (
           <section key={item.id}>
             <div className="flex lg:block m-2">

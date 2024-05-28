@@ -22,7 +22,7 @@ function SelectStatus({states, id}) {
         
     }, [])
 
-    //atualização automática ao mudar o status do select 
+    //atualização automática ao mudar o status dos pedidos 
     const handleSelect =  (event) => {
         const newStatus = event.target.value
         setUpdateSnack(newStatus)

@@ -1,9 +1,6 @@
 import {useState, useEffect} from 'react'
 
-//const API = 'http://localhost:3000'
-
 function SelectBreadMeat({handleChange, API}) {
-    console.log(API)
     const [breads, setBreads] = useState([])
     const [meats, setMeats] = useState([])
 //requisição dos dados do banco de pães
