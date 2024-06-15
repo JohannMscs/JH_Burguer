@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const API = import.meta.env.VITE_API;
-function SelectAdditionals({ handleChange, nameSelect }) {
+const SelectAdditionals = ({ handleChange, nameSelect }) => {
   const [additionals, setAdditionals] = useState([]);
 
   useEffect(() => {

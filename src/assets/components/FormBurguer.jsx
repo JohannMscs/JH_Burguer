@@ -14,7 +14,7 @@ import SelectDrink from "./SelectDrink";
 
 const API = import.meta.env.VITE_API;
 
-function FormBurguer(handleSubmit, hamburgerData) {
+const FormBurguer = (handleSubmit, hamburgerData) => {
   const navigate = useNavigate();
   const [request, setRequest] = useState(hamburgerData || {});
   //envia os dados do formulario para o banco e todos são visivéis na aba pedidos do projeto

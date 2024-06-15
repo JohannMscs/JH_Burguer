@@ -1,7 +1,7 @@
 
 import {useState, useEffect} from 'react'
 
-function Message({msg}) {
+const Message = ({msg}) => {
 
 const [visible, setVisible] = useState(false)
 

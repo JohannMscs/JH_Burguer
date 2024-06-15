@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 
 
-function SelectAccompaniments({handleChange, API}) {
+const SelectAccompaniments = ({handleChange, API}) => {
 const [accompaniments, setAccompaniments] = useState([])
 
 //recebimento de dados de acompanhamentos

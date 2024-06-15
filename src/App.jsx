@@ -6,7 +6,7 @@ import Requests from "./pages/Requests";
 import Footer from "./assets/components/Footer";
 
 
-function App() {
+const App = () => {
   
   return (
     <div className="bg-amber-200">

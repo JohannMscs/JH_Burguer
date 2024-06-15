@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 
 //const API = "http://localhost:3000";
 
-function SelectDrink({handleChange, API}) {
+const SelectDrink = ({handleChange, API}) => {
     const [drinks, setDrinks] = useState([])
 
     useEffect(()=> {

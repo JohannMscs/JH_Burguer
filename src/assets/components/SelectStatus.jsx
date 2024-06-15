@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react'
 const API = import.meta.env.VITE_API
 const API_LOCAL = "http://localhost:3000/requests"
 
-function SelectStatus({states, id}) {
+const SelectStatus = ({states, id}) => {
     const [statusUpdate, setStatusUpdate] = useState([])
     const [snackDelete, setSnackDelete] = useState([])
     const [updateSnack, setUpdateSnack] = useState([])
