@@ -6,9 +6,10 @@ Hamburgueria que utiliza dados de uma fake api, que disponibiliza os ingrediente
 - Na página de pedidos é possível ver os pedidos que foram feitos, é possível mudar o seu status e também deletar eles.
 
 ### Stacks utilizadas 💻
-- `React` 
-- `tailwind` 
-- `json-server`
+- `React`
+- `Javascript`
+- `Tailwind` 
+- `Json-server`
 
 ## Instalação do projeto na máquina 🛠
 ```bash
